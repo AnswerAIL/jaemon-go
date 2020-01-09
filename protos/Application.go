@@ -75,5 +75,24 @@ func main() {
 
 	fmt.Println(user.UserName)
 
+	// 通过 make 创建
+	//cache := make(map[string]int)
+	// 通过 var 创建
+	//var cache map[string]*int
+
+	cache := map[string]string{
+		"name": "answer",
+	}
+	cache["password"]="123456"
+
+	for k, v := range cache {
+		fmt.Println(v, k)
+	}
+
+	// 访问的时候会返回布尔值， 如果 name 存在ok就为true
+	if name, ok := cache["name"]; ok {
+		fmt.Println(name, ok)
+	}
+
 
 }
