@@ -1,0 +1,22 @@
+// 指定版本
+syntax = "proto3";
+
+//option go_package = "github.com/jaemon/protos/org";
+// 生成java 类所在的包
+//option java_package = "com.jaemon.protos.entity";
+
+package common;
+
+message User {
+    string  userName = 1;
+    string password = 2;
+    int64 sex = 3;
+}
+
+message Users {
+    repeated User users = 1;
+}
+
+//message MapData {
+//    map<string, string> map = 1;
+//}

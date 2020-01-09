@@ -8,6 +8,7 @@ import (
 
 	logger "github.com/sirupsen/logrus"
 	"os"
+	"container/list"
 )
 
 // 初始化信息
@@ -57,4 +58,22 @@ func main() {
 	utils.ExecuteRsa()
 
 	utils.ExecuteGenRsaKey()
+
+	var sex int64 = 1;
+
+	var user = &common.User{
+		UserName: "answer",
+		Password: "123456",
+		Sex: sex,
+	}
+
+	var users = list.New()
+
+	users.PushBack(user)
+
+	fmt.Println(users.Len())
+
+	fmt.Println(user.UserName)
+
+
 }
