@@ -26,3 +26,4 @@ protoc.exe  --go_out=./  common.ptoto
 
 # Reference
  - [windows 下 goprotobuf 的安装与使用](https://blog.csdn.net/u010979642/article/details/103896533)
+ - [Go 语言入门教程](http://c.biancheng.net/golang/)
