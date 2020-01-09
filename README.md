@@ -1,3 +1,7 @@
+# GO 语言
+
+___
+
 ```bash
 # 新增对应的 ***.proto 文件， 执行以下命令
 protoc.exe  --go_out=./  common.ptoto
