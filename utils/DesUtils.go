@@ -48,7 +48,7 @@ func DesEncrypt(origData, key []byte) ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	origData = PKCS5Padding(origData, block.BlockSize())
+	origData = pkcs5Padding(origData, block.BlockSize())
 	// origData = ZeroPadding(origData, block.BlockSize())
 	blockMode := cipher.NewCBCEncrypter(block, key)
 	crypted := make([]byte, len(origData))
@@ -67,7 +67,7 @@ func DesDecrypt(crypted, key []byte) ([]byte, error) {
 	origData := make([]byte, len(crypted))
 	// origData := crypted
 	blockMode.CryptBlocks(origData, crypted)
-	origData = PKCS5UnPadding(origData)
+	origData = pkcs5UnPadding(origData)
 	// origData = ZeroUnPadding(origData)
 	return origData, nil
 }
