@@ -17,6 +17,6 @@ message Users {
     repeated User users = 1;
 }
 
-//message MapData {
-//    map<string, string> map = 1;
-//}
+message MapData {
+    map<string, string> cache = 1;
+}
