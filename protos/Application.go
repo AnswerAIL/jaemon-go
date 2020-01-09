@@ -53,4 +53,8 @@ func main() {
 	utils.Execute()
 
 	utils.ExecuteEcdsa()
+
+	utils.ExecuteRsa()
+
+	utils.ExecuteGenRsaKey()
 }

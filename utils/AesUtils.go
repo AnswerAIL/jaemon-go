@@ -9,7 +9,9 @@ import (
 )
 
 /**
-加解密工具类
+	AES 加解密工具类
+
+	https://github.com/polaris1119/myblog_article_code/blob/master/aes/aes.go
 */
 
 func ppcs5Padding(ciphertext []byte, blockSize int) []byte {
