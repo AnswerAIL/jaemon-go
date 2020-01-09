@@ -24,4 +24,6 @@ func main() {
 	fmt.Println("Start Appliaction...")
 
 	utils.Execute()
+
+	utils.ExecuteEcdsa()
 }
