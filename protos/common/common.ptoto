@@ -1,0 +1,11 @@
+// 指定版本
+syntax = "proto3";
+
+message Response {
+    // 状态编码
+    int32 code = 1;
+    // 状态编码具体错误描述
+    string message = 2;
+    // 返回数据
+    bytes result = 3;
+}
