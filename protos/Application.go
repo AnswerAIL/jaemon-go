@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"jaemon-go/protos/common"
+
+	"jaemon-go/utils"
 )
 
 func main() {
@@ -10,14 +12,16 @@ func main() {
 	var data []byte = []byte(name)
 
 	var response = &common.Response{
-		Code: 10000,
+		Code:    10000,
 		Message: "success",
-		Result: data,
+		Result:  data,
 	}
 
 	fmt.Println(response.Message)
 
 	fmt.Println(string(response.Result))
 
-	fmt.Print("Start Appliaction...")
+	fmt.Println("Start Appliaction...")
+
+	utils.Execute()
 }
